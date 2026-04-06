@@ -18,3 +18,7 @@ Critical Thinking Questions
 Why is it important to handle errors for each individual API call rather than just at the end of the promise chain?
 How does using custom error classes improve debugging and error identification?
 When might a retry mechanism be more effective than an immediate failure response?
+Recursion: The retryPromise calls itself if it catches an error, decrementing the retries count each time until it hits zero.
+Sequential Logic: Using a for...of loop inside runDashboard ensures reviews are fetched one after another. 
+Type Safety: By checking instanceof Error, we can safely access the .message and .name properties in the catch block.
+
